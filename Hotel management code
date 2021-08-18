@@ -1,0 +1,413 @@
+#include<stdio.h>
+
+int option(int total_bill);
+
+int menu_card(int choice );
+
+int main()
+
+{
+
+int total_bill=0,bill_cost=0,yes;
+
+printf("\n WELCOME TO NMIT CANTEEN \n ");
+
+bill_cost=option(total_bill);
+
+printf("\n the total bill %d",bill_cost);
+
+do
+
+{
+
+printf("\n DEAR CUSTOMER DO YOU WANT ANYTHING ELSE IF YES (press 1
+
+to continue,0 to discontinue)\n");
+
+scanf("%d",&yes);
+
+if(yes==1)
+
+{
+
+bill_cost=bill_cost+option(total_bill);
+
+printf("\n the total bill %d",bill_cost);
+
+}
+
+}
+
+while(yes!=0);
+
+printf("\n DEAR CUSTOMER PAY THE BILL %d\n ",bill_cost);
+
+printf("\n THANK YOU FOR COMING,PLEASE VISIT US AGAIN\n");
+
+}
+
+int option(int total_bill)
+
+{
+
+int choice;
+
+printf("\n ENTER \n 1 FOR BREAKFAST \n 2 FOR LUNCH \n 3 FOR DINNER \n 4 FOR DRINKS
+
+AND ICECREAM \n 5 FOR FAST FOOD \n");
+
+scanf("%d",&choice);
+
+return total_bill=total_bill+menu_card(choice);
+
+}
+
+int menu_card(int choice )
+
+{
+
+int i,p,ln,bf,dn,yes=1,ff,dd,total=0;
+
+switch (choice)
+
+{
+
+case 1:
+
+{
+
+printf("\n DEAR CUSTOMER YOU WILL BE PROVIDED WITH SOUTH INDIAN
+
+AND NORTH INDIAN DISHES");
+
+printf("\n DEAR CUSTOMER ENTER \n 1 FOR DOSA\n 2 FOR EDLI\n 3 FOR
+
+CHAPATHI\n");
+
+printf("\n ENTER YOUR CHOICE FOR BREAKFAST ITEMS\n");
+
+scanf("%d",&bf);
+
+if(bf==1)
+
+{
+
+printf("\n COST OF 1 PLATE DOSA IS 30\n");
+
+printf("\n ENTER THE NUMBER OF PLATES\n");
+
+scanf("%d",&p);
+
+return total=p*30;
+
+}
+
+ else if(bf==2)
+
+ {
+
+printf("\n COST OF 1 PLATE EDLI IS 35");
+
+printf("\n ENTER THE NUMBER OF PLATES\n");
+
+scanf("%d",&p);
+
+return total=p*35;
+
+}
+
+else if(bf==3)
+
+{
+
+printf("\n COST OF 1 PLATE CHAPATHI IS 40");
+
+printf("\n ENTER THE NUMBER OF PLATES\n");
+
+scanf("%d",&p);
+
+return total=p*40;
+
+//printf("\n TOTAL CASH BILL IS %d",total);
+
+}
+
+else
+
+printf("THE OPTION ENTERED IS INCORRECT\n");
+
+break;
+
+}
+
+case 2:
+
+ {
+
+ printf("\n DEAR CUSTOMER WHAT WOULD YOU LIKE TO HAVE SOUTH INDIAN MEAL OR
+
+NORTH INDIAN MEAL\n ");
+
+printf("\n ENTER 1 FOR MEAL SOUTH INDIAN MEAL\n ENTER 2 FOR NORTH INDIAN
+
+MEAL ");
+
+scanf("%d",&ln);
+
+if(ln==1)
+
+{
+
+ printf("\n THE COST FOR SOUTH INDIAN MEAL IS 120");
+
+printf("\n ENTER THE NUMBER OF PLATES\n");
+
+scanf("%d",&p);
+
+return total=p*120;
+
+}
+
+ else if (ln==2)
+
+{
+
+ printf("\n THE COST FOR NORTH INDIAN MEAL IS 140");
+
+ printf("\n ENTER THE NUMBER OF PLATES\n");
+
+scanf("%d",&p);
+
+return total=p*140;
+
+}
+
+else
+
+printf("THE OPTION ENTERED IS INCORRECT\n");
+
+break;
+
+ }
+
+case 3:
+
+{
+
+ printf("\n WHAT YOU WOULD LIKE TO HAVE SOUTH INDIAN DINNER OR NORTH INDIAN
+
+DINNER");
+
+ printf("\n ENTER\n 1 FOR SOUTH INDIAN DINNER \n 2 FOR NORTH INDIAN DINNER");
+
+ scanf("%d",&dn);
+
+ printf("\n PLEASE ENTER YOUR OPTION\n");
+
+ if(dn==1)
+
+ {
+
+printf("\n THE COST FOR SOUTH INDIAN DINNER IS 80");
+
+printf("\n ENTER THE NUMBER OF PLATES\n");
+
+scanf("%d",&p);
+
+return total=p*80;
+
+}
+
+else if(dn==2)
+
+{
+
+printf("\n THE COST FOR NORTH INDIAN DINNER IS 90");
+
+printf("\n ENTER THE NUMBER OF PLATES\n");
+
+scanf("%d",&p);
+
+return total=p*90;
+
+}
+
+else
+
+printf("\n ENTER THE CORRECT OPTION\n");
+
+ break;
+
+}
+
+case 4:
+
+ {
+
+printf("\n DEAR COUSTER WHAT WOULD U LIKE TO HAVE ICE CREAM OR DRINKS");
+
+printf("\n ENTER \n 1 FOR SLAB ICECREAM \n 2 FOR GUDBUD \n 3 FOR MILKE SHAKE
+
+\n 4 FOR FRUIT JUICES \n 5 FOR COFFEE \n 6 FOR TEA\n ");
+
+printf("\n PLEASE ENTER YOUR OPTION\n");
+
+scanf("\n %d",&dd);
+
+if(dd==1)
+
+ {
+
+printf("\n THE COST FOR SLAB ICECREAM IS 50");
+
+printf("\n ENTER THE NUMBER OF PLATES\n");
+
+scanf("%d",&p);
+
+return total=p*50;
+
+}
+
+else if(dd==2)
+
+{
+
+printf("\n THE COST FOR GUDBUD IS 110");
+
+printf("\n ENTER THE NUMBER OF PLATES\n");
+
+scanf("%d",&p);
+
+return total=p*110;
+
+}
+
+else if(dd==3)
+
+{
+
+printf("\n THE COST FOR MILK SHAKE IS 40");
+
+printf("\n ENTER THE NUMBER OF GLASSES\n");
+
+scanf("%d",&p);
+
+return total=p*40;
+
+}
+
+else if(dd==4)
+
+{
+
+printf("\n THE COST FOR ONE CUP OF JUCIE IS 35");
+
+printf("\n ENTER THE NUMBER OF GLASS\n");
+
+scanf("%d",&p);
+
+return total=p*120;
+
+}
+
+else if(dd==5)
+
+{
+
+printf("\n THE COST FOR COFFEE IS 20");
+
+printf("\n ENTER THE NUMBER OF CUP OF COFFEE \n");
+
+scanf("%d",&p);
+
+return total=p*20;
+
+}
+
+else if(dd==6)
+
+{printf("\n THE COST OF ONE CUP OF TEA IS 25\n");
+
+printf("\n ENTER THE NUMBER OF CUPS\n");
+
+scanf("%d",&p);
+
+}
+
+else
+
+printf("\n ENTER THE CORRECT OPTION\n");
+
+break;
+
+}
+
+ case 5:
+
+ {
+
+ printf("\n DEAR COUSTER WHAT WOULD U LIKE TO HAVE IN FAST FOOD");
+
+printf("\n ENTER \n 1 FOR PIZZA\n 2 FOR BURGER\n 3 FOR FRENCH FRIES\n ");
+
+printf("\n PLEASE ENTER YOUR OPTION\n");
+
+scanf("\n %d",&ff);
+
+if(ff==1)
+
+{
+
+printf("\n THE COST FOR 1 PIZZA IS 150\n");
+
+printf("\n ENTER THE NUMBER OF PIZZA\n");
+
+scanf("%d",&p);
+
+return total=p*150;
+
+}
+
+else if(ff==2)
+
+{ printf("\n THE COST OF 1 BURGER IS 60\n");
+
+printf("\n ENTER THE NUMBER OF BURGER\n");
+
+scanf("%d",&p);
+
+return total=p*60;
+
+}
+
+else if(ff==3)
+
+ {
+
+printf("\n THE COST OF ONE PLATE OF FRENCH FRIES IS 50\n");
+
+printf("\n ENTER THE NUMBER OF PLATES\n");
+
+scanf("%d",&p);
+
+return total=p*50;
+
+}
+
+ else
+
+ printf("\n ENTER THE CORRECT OPTION\n");
+
+ break;
+
+ }
+
+ default:
+
+ printf("\n ENTER THE CORRECT OPTION ");
+
+ break;
+
+}
+
+}
